@@ -28,6 +28,7 @@ type Props = {
   isInputSecure?: boolean,
 };
 
+
 type State = {
   activeInput: number,
   otp: string[],
