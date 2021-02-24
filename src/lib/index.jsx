@@ -235,17 +235,17 @@ class OtpInput extends Component<Props, State> {
     }
 
     const otp = this.getOtpValue();
-    let nextActiveInput = activeInput;
+    let nextActiveInput = 0;
 
     // Get pastedData in an array of max size (num of inputs - current position)
     const pastedData = e.clipboardData
       .getData('text/plain')
-      .slice(0, numInputs - activeInput)
+      .slice(0, numInputs - 0)
       .split('');
 
     // Paste data from focused input onwards
     for (let pos = 0; pos < numInputs; ++pos) {
-      if (pos >= activeInput && pastedData.length > 0) {
+      if (pos >= 0 && pastedData.length > 0) {
         otp[pos] = pastedData.shift();
         nextActiveInput++;
       }
