@@ -8,6 +8,7 @@ const RIGHT_ARROW = 39;
 const DELETE = 46;
 const SPACEBAR = 32;
 
+
 type Props = {
   placeholder: string,
   numInputs: number,
